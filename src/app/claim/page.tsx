@@ -19,11 +19,13 @@ export async function generateMetadata({
       description: `Click to claim your payment of $${amount}`,
       url: `http://localhost:3000/claim?id=${id}&amount=${amount}`,
       type: "website",
+      images: [`http://localhost:3000/api/og?id=${id}&amount=${amount}`],
     },
     twitter: {
       card: "summary_large_image",
       title: `${data.user.username} is sending you $${amount}`,
       description: `Click to claim your payment of $${amount}`,
+      images: [`http://localhost:3000/api/og?id=${id}&amount=${amount}`],
     },
   };
 }
